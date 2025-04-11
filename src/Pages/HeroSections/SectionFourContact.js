@@ -30,7 +30,7 @@ const SectionFourContact = () => {
   return (
     <Box
       sx={{
-        py: 10,
+        py: 25,
         px: 3,
         background: "#121212",
         color: "#fff",

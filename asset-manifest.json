@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/speech-compression/static/css/main.28364d57.css",
+    "main.js": "/speech-compression/static/js/main.b83ec32c.js",
+    "static/media/Onlygraphic.otf": "/speech-compression/static/media/Onlygraphic.309270d2c7a346a84f64.otf",
+    "index.html": "/speech-compression/index.html",
+    "main.28364d57.css.map": "/speech-compression/static/css/main.28364d57.css.map",
+    "main.b83ec32c.js.map": "/speech-compression/static/js/main.b83ec32c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.28364d57.css",
+    "static/js/main.b83ec32c.js"
+  ]
+}

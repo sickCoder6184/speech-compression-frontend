@@ -6,7 +6,13 @@ import {
   Navigate,
   Link,
 } from "react-router-dom";
-import { ThemeProvider, CssBaseline, Box, Typography, Button } from "@mui/material";
+import {
+  ThemeProvider,
+  CssBaseline,
+  Box,
+  Typography,
+  Button,
+} from "@mui/material";
 import { getTheme } from "./theme";
 import Upload from "./Pages/Upload";
 import Login from "./Pages/Login";
@@ -47,8 +53,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-
-      <BrowserRouter>
+      <BrowserRouter basename="/speech-compression">
         {/* Navbar hover zone */}
         <Box
           sx={{
@@ -144,7 +149,6 @@ function App() {
   );
 }
 
-// Animated wrapper for transitions
 function AnimatedPage({ children }) {
   return (
     <motion.div
@@ -159,7 +163,6 @@ function AnimatedPage({ children }) {
   );
 }
 
-// Home (waveform demo)
 function Home({ darkMode }) {
   const waveformRef = useRef(null);
   const waveformInstance = useRef(null);

@@ -4,10 +4,9 @@ import { Box, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const SectionOneHero = ({ onScrollToFeatures, onScrollToLinks, onScrollToContact }) => {
+const SectionOneHero = ({ onScrollToFeatures, onScrollToLinks, onScrollToContact, darkMode }) => {
   return (
     <Box sx={{ position: "relative", height: "100vh", overflow: "hidden" }}>
-      {/* 🎥 Background Video */}
       <video
         autoPlay
         loop
@@ -26,7 +25,6 @@ const SectionOneHero = ({ onScrollToFeatures, onScrollToLinks, onScrollToContact
         }}
       />
 
-      {/* 🌘 Vignette Overlay */}
       <Box
         sx={{
           position: "absolute",
@@ -38,7 +36,6 @@ const SectionOneHero = ({ onScrollToFeatures, onScrollToLinks, onScrollToContact
         }}
       />
 
-      {/* ✨ Hero Content */}
       <Box
         display="flex"
         flexDirection="column"
@@ -52,7 +49,7 @@ const SectionOneHero = ({ onScrollToFeatures, onScrollToLinks, onScrollToContact
           width: "100%",
           height: "100%",
           zIndex: 1,
-          color: "#fff",
+          color: darkMode ? "#fff" : "#111",
           px: 2,
           fontFamily: "'Onlygraphic', sans-serif",
         }}
@@ -68,12 +65,20 @@ const SectionOneHero = ({ onScrollToFeatures, onScrollToLinks, onScrollToContact
               fontFamily: "'Onlygraphic', sans-serif",
               fontWeight: "bold",
               mb: 2,
+              color: darkMode ? "#fff" : "#111",
             }}
           >
             Welcome to Speech Compression
           </Typography>
 
-          <Typography variant="h6" sx={{ maxWidth: 910, mb: 4, color: "yellow" }}>
+          <Typography
+            variant="h6"
+            sx={{
+              maxWidth: 910,
+              mb: 4,
+              color: darkMode ? "#fdd835" : "#f50057",
+            }}
+          >
             Smartly reduce audio file sizes using LPC and DWT — preserving speech clarity while saving bandwidth.
           </Typography>
 
@@ -100,82 +105,87 @@ const SectionOneHero = ({ onScrollToFeatures, onScrollToLinks, onScrollToContact
             Get Started
           </Button>
 
-          {/* Scroll Buttons */}
           <Box mt={4} display="flex" gap={2} flexWrap="wrap" justifyContent="center">
-              <Button
-                onClick={onScrollToFeatures}
-                variant="outlined"
-                sx={{
-                  px: 4,
-                  py: 1,
-                  borderRadius: "30px",
-                  fontWeight: 500,
-                  fontSize: "1rem",
-                  color: "#90caf9",
-                  border: "2px solid #90caf9",
-                  background: "rgba(255, 255, 255, 0.05)",
-                  backdropFilter: "blur(8px)",
-                  transition: "all 0.3s ease",
-                  "&:hover": {
-                    transform: "translateY(-3px)",
-                    boxShadow: "0 4px 20px rgba(144, 202, 249, 0.6)",
-                    borderColor: "#42a5f5",
-                  },
-                }}
-              >
-                Learn More
-              </Button>
+            <Button
+              onClick={onScrollToFeatures}
+              variant="outlined"
+              sx={{
+                px: 4,
+                py: 1,
+                borderRadius: "30px",
+                fontWeight: 500,
+                fontSize: "1rem",
+                color: "#90caf9",
+                border: "2px solid #90caf9",
+                background: "rgba(255, 255, 255, 0.05)",
+                backdropFilter: "blur(8px)",
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  transform: "translateY(-3px)",
+                  boxShadow: "0 4px 20px rgba(144, 202, 249, 0.6)",
+                  borderColor: "#42a5f5",
+                },
+              }}
+            >
+              Learn More
+            </Button>
 
-              <Button
-                onClick={onScrollToLinks}
-                variant="outlined"
-                sx={{
-                  px: 4,
-                  py: 1,
-                  borderRadius: "30px",
-                  fontWeight: 500,
-                  fontSize: "1rem",
-                  color: "#90caf9",
-                  border: "2px solid #90caf9",
-                  background: "rgba(255, 255, 255, 0.05)",
-                  backdropFilter: "blur(8px)",
-                  transition: "all 0.3s ease",
-                  "&:hover": {
-                    transform: "translateY(-3px)",
-                    boxShadow: "0 4px 20px rgba(144, 202, 249, 0.6)",
-                    borderColor: "#42a5f5",
-                  },
-                }}
-              >
-                About
-              </Button>
+            <Button
+              onClick={onScrollToLinks}
+              variant="outlined"
+              sx={{
+                px: 4,
+                py: 1,
+                borderRadius: "30px",
+                fontWeight: 500,
+                fontSize: "1rem",
+                color: "#90caf9",
+                border: "2px solid #90caf9",
+                background: "rgba(255, 255, 255, 0.05)",
+                backdropFilter: "blur(8px)",
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  transform: "translateY(-3px)",
+                  boxShadow: "0 4px 20px rgba(144, 202, 249, 0.6)",
+                  borderColor: "#42a5f5",
+                },
+              }}
+            >
+              About
+            </Button>
 
-              <Button
-                onClick={onScrollToContact}
-                variant="outlined"
-                sx={{
-                  px: 4,
-                  py: 1,
-                  borderRadius: "30px",
-                  fontWeight: 500,
-                  fontSize: "1rem",
-                  color: "#90caf9",
-                  border: "2px solid #90caf9",
-                  background: "rgba(255, 255, 255, 0.05)",
-                  backdropFilter: "blur(8px)",
-                  transition: "all 0.3s ease",
-                  "&:hover": {
-                    transform: "translateY(-3px)",
-                    boxShadow: "0 4px 20px rgba(144, 202, 249, 0.6)",
-                    borderColor: "#42a5f5",
-                  },
-                }}
-              >
-                Contact Us
-              </Button>
-            </Box>
-
+            <Button
+              onClick={onScrollToContact}
+              variant="outlined"
+              sx={{
+                px: 4,
+                py: 1,
+                borderRadius: "30px",
+                fontWeight: 500,
+                fontSize: "1rem",
+                color: "#90caf9",
+                border: "2px solid #90caf9",
+                background: "rgba(255, 255, 255, 0.05)",
+                backdropFilter: "blur(8px)",
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  transform: "translateY(-3px)",
+                  boxShadow: "0 4px 20px rgba(144, 202, 249, 0.6)",
+                  borderColor: "#42a5f5",
+                },
+              }}
+            >
+              Contact Us
+            </Button>
+          </Box>
         </motion.div>
+
+        <Typography
+          variant="body2"
+          sx={{ mt: 6, fontSize: "0.9rem", opacity: 0.7 }}
+        >
+          © 2025 Speech Compression. All rights reserved.
+        </Typography>
       </Box>
     </Box>
   );

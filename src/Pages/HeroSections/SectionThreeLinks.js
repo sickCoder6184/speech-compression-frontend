@@ -41,7 +41,7 @@ const SectionThreeLinks = () => {
     <Box
       sx={{
         py: 10,
-        px: 3,
+        px: { xs: 2, sm: 4, md: 8 },
         background: "linear-gradient(to top, #0f2027, #203a43, #2c5364)",
         color: "#fff",
       }}

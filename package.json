@@ -23,7 +23,7 @@
     "wavesurfer.js": "^7.9.4",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://sickcoder6184.github.io/speech-compression",
+  "homepage": "https://your-username.github.io/speech-compression-frontend",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

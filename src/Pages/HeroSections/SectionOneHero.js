@@ -58,7 +58,7 @@ const SectionOneHero = ({ onScrollToFeatures, onScrollToLinks, onScrollToContact
               sx={{
                 fontWeight: "bold",
                 mb: 2,
-                color: (theme) => darkMode ?  theme.palette.text.primary:theme.palette.common.white,
+                color:"#42A5F5",
               }}
             >
               Welcome to Speech Compression
@@ -69,7 +69,7 @@ const SectionOneHero = ({ onScrollToFeatures, onScrollToLinks, onScrollToContact
             sx={{
               maxWidth: 910,
               mb: 4,
-              color:(theme) =>  darkMode ?  "yellow" :"yellow",
+              color:"white",
             }}
           >
             Smartly reduce audio file sizes using LPC and DWT — preserving speech clarity while saving bandwidth.

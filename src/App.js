@@ -53,7 +53,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <BrowserRouter basename="/speech-compression">
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         {/* Navbar hover zone */}
         <Box
           sx={{

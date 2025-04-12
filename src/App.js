@@ -53,7 +53,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter>
         {/* Navbar hover zone */}
         <Box
           sx={{

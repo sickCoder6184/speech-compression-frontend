@@ -9,6 +9,7 @@ import {
   Alert,
 } from "@mui/material";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 const SectionFourContact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -21,10 +22,28 @@ const SectionFourContact = () => {
   const handleSubmit = () => {
     if (!form.name || !form.email || !form.message) {
       setSnack({ open: true, success: false, text: "All fields are required." });
-    } else {
-      setSnack({ open: true, success: true, text: "Feedback sent. Thank you!" });
-      setForm({ name: "", email: "", message: "" });
+      return;
     }
+
+    emailjs
+      .send(
+        "service_fvzd5tb",
+        "template_5vgbd8c",
+        {
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          title: "User Feedback",
+        },
+        "kjtARSnYBlU9BSppY"
+      )
+      .then(() => {
+        setSnack({ open: true, success: true, text: "Feedback sent. Thank you!" });
+        setForm({ name: "", email: "", message: "" });
+      })
+      .catch(() => {
+        setSnack({ open: true, success: false, text: "Something went wrong. Please try again." });
+      });
   };
 
   return (

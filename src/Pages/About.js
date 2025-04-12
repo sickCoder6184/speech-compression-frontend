@@ -63,7 +63,7 @@ const About = () => {
           How It Works
         </Typography>
         <ol style={{ color: "#ccc", paddingLeft: "1.5rem", lineHeight: 1.8, fontSize: "1rem" }}>
-          <li>Upload a speech file (WAV/MP3)</li>
+          <li>Upload a speech file (.flac)</li>
           <li>Audio is processed using LPC and DWT</li>
           <li>Compressed audio is reconstructed and previewed</li>
           <li>Download or save the output</li>

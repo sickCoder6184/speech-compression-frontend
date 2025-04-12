@@ -41,9 +41,15 @@ const SectionFourContact = () => {
         setSnack({ open: true, success: true, text: "Feedback sent. Thank you!" });
         setForm({ name: "", email: "", message: "" });
       })
-      .catch(() => {
-        setSnack({ open: true, success: false, text: "Something went wrong. Please try again." });
-      });
+      .catch((error) => {
+          console.error("EmailJS Error:", error);
+          setSnack({
+            open: true,
+            success: false,
+            text: "Something went wrong. Please try again.",
+          });
+});
+
   };
 
   return (

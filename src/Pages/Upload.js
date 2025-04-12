@@ -37,6 +37,7 @@
           const response = await fetch(`${process.env.REACT_APP_API_URL}/upload`, {
             method: "POST",
             body: formData,
+            mode:"no-cors"
           });
 
           const data = await response.json();
